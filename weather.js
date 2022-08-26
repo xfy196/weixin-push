@@ -4,6 +4,8 @@ const SCKEY = process.env.SCKEY;
 // coolpush酷推KEY
 const SKEY = process.env.SKEY;
 
+console.log(SCKEY, SKEY);
+
 async function get_iciba_everyday() {
   const icbapi = `http://open.iciba.com/dsapi/`;
   const eed = await fetch(icbapi);
