@@ -21,10 +21,10 @@ jobs:
       uses: actions/checkout@main
       # 首先copy git仓库到虚拟机上
       name: Checkout
-        uses: actions/checkout@v2
+      uses: actions/checkout@v2
         # 安装初始化python
       name: Setup Node.js
-        uses: actions/setup-node@v2 #安装node.js
+      uses: actions/setup-node@v2 #安装node.js
         with:
           node-version: "14"
 
