@@ -16,7 +16,7 @@ async function get_iciba_everyday() {
 }
 
 async function ServerPush(info) {
-  const api = `https://sc.ftqq.com/SCT167595Tso7cDhKnFWsm31pcgCBSnMBM.send`;
+  const api = `https://sc.ftqq.com/${SCKEY}.send`;
   const title = "天气推送";
   const content = info.replace("\n", "\n\n");
   const formdata = new FormData();
