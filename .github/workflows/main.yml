@@ -18,7 +18,6 @@ jobs:
 
     # 指出这个build任务的步骤
     steps:
-      uses: actions/checkout@main
       # 首先copy git仓库到虚拟机上
       name: Checkout
       uses: actions/checkout@v2
