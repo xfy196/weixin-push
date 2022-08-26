@@ -1,10 +1,9 @@
 const fetch = require("node-fetch");
+const FormData = require("form-data");
 // server酱推送KEY
 const SCKEY = process.env.SCKEY;
 // coolpush酷推KEY
 const SKEY = process.env.SKEY;
-
-console.log(SCKEY, SKEY);
 
 async function get_iciba_everyday() {
   const icbapi = `http://open.iciba.com/dsapi/`;
@@ -17,17 +16,16 @@ async function get_iciba_everyday() {
 }
 
 async function ServerPush(info) {
-  const api = `https://sc.ftqq.com/${SCKEY}.send`;
+  const api = `https://sc.ftqq.com/SCT167595Tso7cDhKnFWsm31pcgCBSnMBM.send`;
   const title = "天气推送";
   const content = info.replace("\n", "\n\n");
-  const data = {
-    text: title,
-    desp: content,
-  };
+  const formdata = new FormData();
+  formdata.append("title", title);
+  formdata.append("desp", content);
   console.log(content);
   await fetch(api, {
     method: "POST",
-    body: data,
+    body: formdata,
   });
 }
 async function CoolPush(info) {
