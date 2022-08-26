@@ -28,9 +28,9 @@ async function ServerPush(info) {
     body: data,
   });
 }
-function CoolPush(info) {
+async function CoolPush(info) {
   const api = `https://push.xuthus.cc/send/${SKEY}'`;
-  fetch(api, {
+  await fetch(api, {
     method: "POST",
     body: info,
   });
