@@ -38,7 +38,8 @@ async function CoolPush(info) {
 async function main() {
   try {
     const api = `http://t.weather.itboy.net/api/weather/city/`;
-    const city_code = "101110105";
+    // 天长城市编码
+    const city_code = "101221107";
     const tqurl = api + city_code;
     const response = await fetch(tqurl);
     const d = await response.json();
