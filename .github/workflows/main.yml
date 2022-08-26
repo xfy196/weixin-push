@@ -7,7 +7,7 @@ on:
   push:
     branches: [main]
   schedule:
-    cron: "0 9 * * *"
+    - cron: "0 23 * * *"
 
 # 工作流是由一个或多个的jobs构成的，在jobs里来说明要交给GitHub aciton执行的任务
 jobs:
