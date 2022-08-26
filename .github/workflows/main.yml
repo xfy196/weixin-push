@@ -19,19 +19,19 @@ jobs:
     # 指出这个build任务的步骤
     steps:
       # 首先copy git仓库到虚拟机上
-      name: Checkout
+    - name: Checkout
       uses: actions/checkout@v2
         # 安装初始化python
-      name: Setup Node.js
+    - name: Setup Node.js
       uses: actions/setup-node@v2 #安装node.js
-        with:
-          node-version: "14"
+      with:
+        node-version: "14"
 
-      name: Install Dependency
+    - name: Install Dependency
         run: |
           npm install
           node ./weather.js
-      name: Working
+    - name: Working
         env: 
           SCKEY: ${{ secrets.SCKEY }}
           SKEY: ${{ secrets.SKEY }}
